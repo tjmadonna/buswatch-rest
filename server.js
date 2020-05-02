@@ -16,6 +16,9 @@ db.on('error', (error) => console.error(error))
 db.once('open', () => console.log('Connected to database'))
 
 // Setup routers
+const predictionsRouter = require('./routes/predictions')
+
+app.use('/predictions', predictionsRouter)
 
 // Start listening
 app.listen(process.env.PORT, () => console.log('Server started'))
