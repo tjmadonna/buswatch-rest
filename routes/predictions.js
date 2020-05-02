@@ -1,10 +1,9 @@
+require('dotenv').config();
+
 const router = require('express').Router();
 const axios = require('axios');
 const util = require('util');
-const mongoose = require('mongoose')
 const Trip = require('../models/trip')
-
-require('dotenv').config();
 
 // Get predictions for stop id
 router.route('/:id').get(checkApiKey, checkStopId, (req, res) => {
