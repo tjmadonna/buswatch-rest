@@ -31,7 +31,7 @@ async function mapPrdsToPredictions(prds) {
         
     return prds.map(prd => ({
       vehicleId: prd.vid,
-      route: prd.rt,
+      routeId: prd.rt,
       routeTitle: titleMap.get(prd.tatripid),
       arrivalTime: parseDate(prd.prdtm)
     }));
